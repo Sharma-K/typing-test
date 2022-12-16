@@ -10,16 +10,30 @@ body{
 }
 h1{
   color: #00ddb6;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   font-family: 'Roboto Mono';
   text-transform: uppercase;
 }
+.wrong{
+    color: red;
+}
+.correct{
+    color: green;
+}
+.timer{
+    text-align: center;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    color: #00ddb6;
+}
+
 
 p{
-    
+   
     font-family: 'Roboto Mono';
     font-size: 1.5em;
     letter-spacing: 5px;
+    background-color: yellow;
     background: linear-gradient(#a947f2, #00ddb6);
     -webkit-background-clip: text;
             background-clip: text;
@@ -38,6 +52,7 @@ p{
     opacity: 0.5;
    border: none;
 }
+
 
 .btn{
     margin-top: 5px;
