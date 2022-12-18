@@ -14,6 +14,7 @@ const con = document.getElementById('container');
 const cont = document.getElementById('content');
 const timer  = document.querySelector('.timer');
 const display = document.querySelector('.disp');
+let finalmsg = document.createElement('p');
 let wrong;
 
 
@@ -77,7 +78,7 @@ function end(){
 
     
     let totalCharacters = display.childElementCount - wrong.length;
-    let finalmsg = document.createElement('p');
+  
    
     display.innerHTML = '';
     display.append(finalmsg);
@@ -99,6 +100,7 @@ function end(){
     
 
     cont.innerHTML = 'Play Again!';
+    btn.innerText ='Reload';
     con.innerText = '';
 
 }
@@ -159,10 +161,16 @@ function clickHandler(){
     totalWords = tempString.filter(w=>w!==' ').length;
 
    
+    if(btn.innerText=='Reload')
+    {
+        window.location.reload();
+    }
  
     
     if(btn.innerText=='Start')
     {
+        finalmsg.innerHTML = '';
+        display.innerHTML= '';
        btn.innerText = 'End';
        start();
     }
